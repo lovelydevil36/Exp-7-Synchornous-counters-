@@ -88,11 +88,41 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 ### PROGRAM 
-/*
+
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+Developed by: ABDUL HAMEED.J
+
+RegisterNumber:  21222250001
+
+UP COUNTER:
+```module up(clk,A);
+input clk;
+output reg [3:0]A;
+always@(posedge clk)
+begin
+A[3]=((A[2]&A[1])&A[0])^A[3];
+A[2]=(A[1]&A[0])^A[2];
+A[1]=(A[0]^A[1]);
+A[0]=1^A[0];
+end
+endmodule
+```
+DOWN COUNTER:
+```
+
+module down(clk,A);
+input clk;
+output reg [3:0]A;
+always @(posedge clk)
+begin
+A[3]=((~A[2])&(~A[1])&(~A[0]))^A[3];
+A[2]=((~A[1])&(~A[0]))^A[2];
+A[1]=(~A[0])^A[1];
+A[0]=1^A[0];
+end
+endmodule
+```
 
 
 
@@ -101,6 +131,12 @@ RegisterNumber:
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
+UP COUNTER:
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/a050a810-5fc5-4afb-a650-5d422c2e3601)
+
+
+DOWN COUNTER:
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/4ee73fe7-7704-4abc-9e08-f39a88354056)
 
 
 
@@ -111,15 +147,29 @@ RegisterNumber:
 
 ### TIMING DIGRAMS FOR COUNTER  
 
+UP COUNTER:
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/f42fb0c6-d221-425c-8966-ce12c9cbd904)
 
+
+DOWN COUNTER:
+
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/93f29248-b41c-4461-a5c1-1cab68335b78)
 
 
 
 ### TRUTH TABLE 
 
+UP COUNTER:
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/97d8e43e-3b65-495d-b217-5c0e861434fb)
+
+
+DOWN COUNTER:
+![image](https://github.com/lovelydevil36/Exp-7-Synchornous-counters-/assets/123564624/291b93f8-0e4a-4a69-b1b5-0010f10dc5f2)
 
 
 
 
 
 ### RESULTS 
+To implement 4 bit up and down counters and validate functionality is executed successfully.
+
