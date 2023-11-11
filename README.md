@@ -93,7 +93,7 @@ Program for flipflops  and verify its truth table in quartus using Verilog progr
 
 Developed by: ABDUL HAMEED.J
 
-RegisterNumber:  21222250001
+RegisterNumber:  212222050001
 
 UP COUNTER:
 ```module up(clk,A);
